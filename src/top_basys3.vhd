@@ -75,7 +75,7 @@ begin
    ripple_adder_0: ripple_adder
    port map(
         A => sw(1),
-        B => sw(12),
+        B => sw(5),
         Cin => sw(0),
         S => led(0),
         Cout => w_carry(0)
@@ -84,7 +84,7 @@ begin
    ripple_adder_1: ripple_adder
    port map(
         A => sw(2),
-        B => sw(13),
+        B => sw(6),
         Cin => w_carry(0),
         S => led(1),
         Cout => w_carry(1)
@@ -93,7 +93,7 @@ begin
    ripple_adder_2: ripple_adder
    port map(
         A => sw(3),
-        B => sw(14),
+        B => sw(7),
         Cin => w_carry(1),
         S => led(2),
         Cout => w_carry(2)
@@ -102,7 +102,7 @@ begin
    ripple_adder_3: ripple_adder
    port map(
         A => sw(4),
-        B => sw(15),
+        B => sw(8),
         Cin => w_carry(2),
         S => led(3),
         Cout => led(15)
