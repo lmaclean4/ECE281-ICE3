@@ -66,7 +66,6 @@ architecture top_basys3_arch of top_basys3 is
             );
         end component ripple_adder;
     -- declare any signals you will need	
-    signal w_carry : STD_LOGIC_VECTOR(2 downto 0);
 begin
 	-- PORT MAPS --------------------
    
