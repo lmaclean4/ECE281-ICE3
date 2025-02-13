@@ -46,7 +46,7 @@ library ieee;
 entity top_basys3 is
 	port(
 		-- Switches
-		sw		:	in  std_logic_vector(15 downto 0);
+		sw		:	in  std_logic_vector(8 downto 0);
 		
 		-- LEDs
 		led	    :	out	std_logic_vector(15 downto 0)
@@ -56,12 +56,24 @@ end top_basys3;
 architecture top_basys3_arch of top_basys3 is 
 	
     -- declare the component of your top-level design
-
+    component full_adder is
+        port (
+            sw : in std_logic;
+            led : out std_logic
+            );
+        end component full_adder;
     -- declare any signals you will need	
-  
+    signal w_carry : STD_LOGIC_VECTOR(2 downto 0);
 begin
 	-- PORT MAPS --------------------
-   
+   full_adder_0: full_adder
+    port map(
+        A => sw(0),
+        B => sw(),
+        Cin => Cin,
+        S => S(0),
+        Cout => w_carry(0)
+    );
 	---------------------------------
 	
 	-- CONCURRENT STATEMENTS --------
