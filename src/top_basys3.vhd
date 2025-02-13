@@ -62,9 +62,7 @@ architecture top_basys3_arch of top_basys3 is
             B : in std_logic;
             Cin : in std_logic;
             S : out std_logic;
-            Cout : out std_logic;
-            sw : in std_logic;
-            led : out std_logic
+            Cout : out std_logic
             );
         end component ripple_adder;
     -- declare any signals you will need	
@@ -78,9 +76,7 @@ begin
         B => sw(5),
         Cin => sw(0),
         S => led(0),
-        Cout => w_carry(0),
-        sw => '0',
-        led => open
+        Cout => w_carry(0)
    );
    
    ripple_adder_1: ripple_adder
@@ -89,9 +85,7 @@ begin
         B => sw(6),
         Cin => w_carry(0),
         S => led(1),
-        Cout => w_carry(1),
-        sw => '0',
-        led => open
+        Cout => w_carry(1)
    );
    
    ripple_adder_2: ripple_adder
@@ -100,9 +94,7 @@ begin
         B => sw(7),
         Cin => w_carry(1),
         S => led(2),
-        Cout => w_carry(2),
-        sw => '0',
-        led => open
+        Cout => w_carry(2)
    );
    
    ripple_adder_3: ripple_adder
@@ -111,9 +103,7 @@ begin
         B => sw(8),
         Cin => w_carry(2),
         S => led(3),
-        Cout => led(15),
-        sw => '0',
-        led => open
+        Cout => led(15)
    );
    
    
