@@ -87,9 +87,6 @@ begin
         Cout => w_Cout
     );
    
-   led(3 downto 0) <= w_S;
-   led(15) <= w_Cout;
-   
 	---------------------------------
 	
 	-- CONCURRENT STATEMENTS --------
