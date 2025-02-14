@@ -24,4 +24,8 @@ If any of the `assert` statements fail then GHDL will cease the simulation and e
 Assert statements of other severity levels will be reported, but not fail the workflow.
 
 ![waveform looks good](ripple_adder.png)
+![basys entity sketch](ripple_sketch.png)
+
+## Documentation
+no help received
 
